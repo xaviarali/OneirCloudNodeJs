@@ -1,0 +1,66 @@
+#head
+{
+
+}
+
+#start
+{
+    width: 50%;
+    margin: 0 auto; 
+    margin-top: 50 px;
+}
+
+#login
+{
+  
+}
+
+#menu
+{
+
+}
+
+#logout_session
+{
+   white-wrap: break-word;
+}
+
+#sess_button_div
+{
+    
+  text-align:center;
+}
+
+#session_name
+{
+  width: 50%;
+  margin: 0 auto;
+}
+#logout_sess
+{
+  
+}
+
+#sc_op
+{
+  text-align:center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+body
+{
+
+}
+
+#menu_portionxx
+{
+  width:25%;
+  float:left;
+  
+}
+#menu_portion
+{
+  width:25%;
+  
+}

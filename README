@@ -1,0 +1,19 @@
+How to run
+===========
+1. From the terminal/console, change directory to this folder
+2. run `npm install`
+3. run `node bin/www`
+
+Database Setup
+=============
+1. Install Rethinkdb (http://rethinkdb.com/)
+2. Run rethinkdb server
+3. Open the admin console at http://localhost:8080
+4. Create a database named "oneir"
+5. Create a table named "users" in the DataExplorer section of the admin, then create the following index:
+	` r.db("oneir").table("users").indexCreate("username")`
+
+	`r.db("oneir").table("users").indexCreate(
+        "login", [r.row("username"), r.row("password")]
+    )`
+
