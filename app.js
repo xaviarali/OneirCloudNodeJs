@@ -67,6 +67,7 @@ app.get("/login_check",function(req,res){
 app.get("/oneir_session_login",function(req,res){
              if(req.query.id)
              { 
+		       req.tab_id = 1;
                req.session.idx = req.query.id;
                res.json({'id' : 1});
              }
@@ -95,14 +96,23 @@ app.get("/oneir",function(req,res){
             res.header('Content-Lenght', temp);         
            res.status(200).json({'command' : temp});
            res.end();
-        });
+      });
 
 app.get("/oneir_session_name",function(req,res){
            if(req.session.idx !== null) 
            res.json({ 'id' : req.session.idx});
            res.end();
-        });
-
+      });
+app.get("/oneir_session_name",function(req,res){
+           if(req.session.idx !== null) 
+           res.json({ 'id' : req.session.idx});
+           res.end();
+      });
+app.get("/browser_tab_id",function(req,res){
+            
+           res.json({ 'tab_id' : req.tab_id++});
+           res.end();
+      });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
