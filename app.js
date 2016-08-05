@@ -54,6 +54,7 @@ app.use('/users', users);
 app.use('/inventory', inventory);
 app.use('/api', api);
 
+// routers
 app.get("/menu",function(req,res){
             res.render("menu");
       });
